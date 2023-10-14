@@ -1,0 +1,251 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.header {
+    position: fixed !important;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    width: 100%;
+    height: 46.5px;
+}
+
+.nav > li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    line-height: 46.5px;
+    padding: 0 24px;
+}
+.nav, .subnav{
+    list-style-type: none;
+}
+.nav .subnav li:hover a,
+.nav > li:hover >a {
+    background-color: #ccc;
+    color: black;
+}
+.nav li:hover a {
+    background-color: #ccc;
+    color: black;
+}
+.nav>li>a{
+    text-transform: uppercase;
+}
+.nav .subnav a{
+    color: #000;
+    padding: 0 15px;
+}
+.subnav {
+    display: none;
+    background-color: #fff !important; 
+    position: absolute;
+    width: 22vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+} 
+.nav .subnav li a{
+    background-color: #fff ; 
+}
+.header>ul>li:hover>ul{
+    display: block;
+}
+.header>ul>li:hover .icon-down{
+        filter: brightness(0);
+        -webkit-filter: brightness(0);
+}
+.search{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 46.5px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search:hover{
+    background-color: red;
+}
+
+.slide{
+    position: relative;
+    z-index: -1;
+    margin-top: 46px;
+    width: 100%;
+    padding-top: 50%;
+    background: url('/assets/img/img1.jpg') top center/ cover no-repeat;
+}
+.slide .text-content{
+    position: absolute;
+    bottom: 48px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.slide .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+.slide .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .content-section .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.content .content-section .section-sub-heading{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.content .about-text{
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.content .members-list{
+    margin-top: 48px;
+    overflow: hidden;
+}
+.content .member-item{
+    float: left;
+    width: 33,3333%;
+    text-align: center;
+    padding-left: 80px;
+}
+
+.content .member-name{
+    font-size: 17px;
+}
+
+.content .member-avt{
+    width: 155px;
+    margin-top: 15px !important;
+    border-radius: 4px;
+}
+
+/* tour section */
+.tour-section{
+    background-color: #000;
+    color: #fff;
+}
+
+.tour-section .ticket-list{
+    margin-top: 40px;
+    background-color: #fff;
+    color: #000;
+}
+
+.tour-section .ticket-list li{
+    font-size: 16px;
+    border-bottom: 1px #ddd solid;
+    padding: 11px 16px;
+    color: #757575;
+    list-style: none;
+}
+
+.tour-section .sold-out{
+    background-color: #f44336;
+    margin-left: 20px;
+}
+
+.tour-section .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+/* place */
+.places-list{
+    margin: 32px -8px 0;
+    overflow: hidden;
+   
+}
+
+.places-list .place-item{
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+   
+}
+.places-list .place-body{
+    background-color: #fff;
+    color: #000;
+    padding: 13px  16px;
+    font-size: 15px;
+}
+
+.places-list .place-heading{
+    
+    font-weight: 600;
+}
+
+.places-list .place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.places-list .place-description{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.places-list .place-image{
+    display: block;
+    width: 100%;
+}
+
+.places-list .place-image:hover{
+    opacity: 0.6;
+}
+
+.place-buy-btn{
+    display: inline-block;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 12px 16px;
+    margin-top: 16px;
+}
+
+
+
+
+
+
