@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <script src="https://kit.fontawesome.com/4f25be434d.js"
+	crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/assets/css/style.css">
         <link rel="stylesheet" href="/font/themify-icons-font/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="/font/fontawesome/fontawesome-free-6.2.0-web/css/all.css">
@@ -79,7 +81,7 @@
                                     <h3 class="place-heading">New York</h3>
                                     <p class="place-time">Fri 27 Nov 2016</p>
                                     <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <a href="" class="place-buy-btn">Buy Tickets</a>
+                                    <button  class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                                 </div>
                             </div>
                             <!-- Place -->
@@ -89,7 +91,7 @@
                                     <h3 class="place-heading">New York</h3>
                                     <p class="place-time" style="font-size: 15px; opacity: 0.7;">Sat 28 Nov 2016</p>
                                     <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <a href="" class="place-buy-btn">Buy Tickets</a>
+                                    <button  class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                                 </div>
                             </div>
                             <div class="place-item">
@@ -98,22 +100,75 @@
                                     <h3 class="place-heading">San Francisco</h3>
                                     <p class="place-time">Sun 29 Nov 2016</p>
                                     <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <a href="" class="place-buy-btn">Buy Tickets</a>
+                                    <button  class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- contact -->
                 <div class="content-section">
                     <h2 class="section-heading">CONTACT</h2>
                     <p class="section-sub-heading">Fan? Drop a note!</p>
                 </div>
-
             </div>
             <div class="footer"></div>
         </div>
+        <div class="modal-ticket" >
+            <div class="modal-container">
+                <div class="btn-close js-btn-close" >
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <header class="modal-header">
+                    <i style="margin-right: 16px;" class="fa-sharp fa-regular fa-bag-shopping"></i>
+                    TICKET
+                </header>
+                <div class="modal-body">
+                    <label for="ticket-quantity-people" class="modal-label">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Tickets, &15 per person
+                    </label>
+                    <input required id="ticket-quantity-people" type="text" class="modal-input" placeholder="How many?">
+                    
+                    <label for="ticket-email" class="modal-label">
+                        <i class="fa-solid fa-user"></i>
+                        Send to
+                    </label>
+                    <input required id="ticket-email" type="text" class="modal-input" placeholder="Enter mail">
+                    <button class="btn-buy-tickets">
+                        Buy Tickets
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                </div>
+                <footer class="modal-footer">
+                    Need <a href="#">help?</a>
+                </footer>
+            </div>
+        </div>
         <script src="/assets/js/index.js"></script>
+        <script>
+            const btnBuys = document.querySelectorAll('.js-buy-ticket');
+            const modalTicket = document.querySelector('.modal-ticket');
+            const modalContainer = document.querySelector('.modal-container');
+            const btnClose = document.querySelector('.js-btn-close');
+
+            function showBuyTikcetModal(){
+                modalTicket.style.visibility = 'visible';
+            }
+
+            function hideBuyTikcetModal(){
+                modalTicket.style.visibility = 'hidden';
+            }
+
+            for(const btnBtn of btnBuys){
+                btnBtn.addEventListener('click', showBuyTikcetModal)
+            }
+
+            btnClose.addEventListener('click',hideBuyTikcetModal)
+            modalTicket.addEventListener('click',hideBuyTikcetModal)
+            modalContainer.addEventListener('click',function(e){
+                e.stopPropagation()
+            }) // ngăn chặn việc nổi bọt, tránh khi muốn ẩn thẻ cha phải click thẻ cha nhưng click thẻ con thì vẫn bị
+        </script>
     </body>
 </html>
