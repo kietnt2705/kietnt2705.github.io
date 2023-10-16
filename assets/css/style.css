@@ -92,15 +92,15 @@ html {
 
 .input-search{
     position: absolute;
-    top: 50px;
+    top: 48px;
     right: 1px;
     width: 18rem;
     height: 80%;
     visibility: hidden;
     font-size: 1em;
     padding: 10px;
-    border: 0;
-    border-radius: 7px;
+    border: 2px solid rgb(158, 158, 194);
+    border-radius: 4px;
 }
 
 @keyframes render{
