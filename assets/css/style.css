@@ -77,9 +77,43 @@ html {
     align-items: center;
     justify-content: space-around;
 }
+
+/* input search animate */
+
 .search:hover{
-    background-color: red;
+    background-color: #f44336;
 }
+
+.search:hover .input-search{
+    background-color: #fff;
+    animation: render ease 1s;
+    visibility: visible;
+}
+
+.input-search{
+    position: absolute;
+    top: 50px;
+    right: 1px;
+    width: 18rem;
+    height: 80%;
+    visibility: hidden;
+    font-size: 1em;
+    padding: 10px;
+    border: 0;
+    border-radius: 7px;
+}
+
+@keyframes render{
+    from{
+        visibility: hidden;
+        width: 0;
+    }
+    to{
+        visibility: visible;
+        width: 18rem;
+    }
+}
+
 
 .slide{
     position: relative;
@@ -123,7 +157,7 @@ html {
     font-size: 15px;
     text-align: center;
     font-style: italic;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .content .about-text{
@@ -138,8 +172,6 @@ html {
     overflow: hidden;
 }
 .content .member-item{
-    float: left;
-    width: 33,3333%;
     text-align: center;
     padding-left: 80px;
 }
@@ -193,17 +225,10 @@ html {
 
 /* place */
 .places-list{
-    margin: 32px -8px 0;
+    margin-top: 32px;
     overflow: hidden;
-   
 }
 
-.places-list .place-item{
-    float: left;
-    width: 33.33333%;
-    padding: 0 8px;
-   
-}
 .places-list .place-body{
     background-color: #fff;
     color: #000;
@@ -354,6 +379,79 @@ html {
         transform: translateY(0);
     }
 }
+
+/* contact form */
+
+.contact-infomation{
+    line-height: 1.3;
+}
+.contact-infomation>p>i{
+    width: 30px;
+}
+.contact-infomation{
+    font-size: 1.2em;
+}
+
+.contact-form .form-control{
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form input[type="text"], input[type="email"]{
+    font-size: 1em;
+}
+
+.contact-form input[type="submit"]{
+    float: right;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: 1px solid #000;
+}
+
+.contact-form input[type="submit"]:hover{
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* map */
+.map-section{
+    margin-top: 30px;
+    filter: grayscale(50%);
+}
+
+.map-section img{
+    width: 100%;
+    height: auto;
+}
+
+/* footer */
+.footer{
+    text-align: center;
+    padding: 65px 0;
+}
+.footer .social-list{
+    font-size: 22px;
+    padding-bottom: 10px;
+    color: #ccc;
+}
+
+.footer .copyright>a{
+    color: gray;
+    text-decoration: none;
+    text-align: center;
+}
+.footer .copyright>a{
+    color: gray;
+    text-decoration: none;
+    text-align: center;
+}
+
+
 
 
 
