@@ -8,6 +8,7 @@
 html {
     font-size: 15px;
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .header {
